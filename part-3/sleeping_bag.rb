@@ -1,0 +1,43 @@
+require_relative 'modules'
+
+class SleepingBag
+  attr_reader :style, :size, :shell
+  include Reservable
+
+  def initialize(args = {})
+    @style = args.fetch(:style) { "rectangular" }
+    @size = args.fetch(:size) { "adult" }
+    @shell = args.fetch(:shell) { "nylon" }
+  end
+
+end
+
+
+
+  # def reserve
+  #   @reserved = true
+  # end
+
+  # def end_reservation
+  #   @reserved = false
+  # end
+
+  # def reserved?
+  #   @reserved
+  # end
+
+  # def available?
+  #   !reserved?
+  # end
+
+  # def damaged?
+  #   @damaged
+  # end
+
+  # def record_damage
+  #   @damaged = true
+  # end
+
+  # def repair
+  #   @damaged = false
+  # end
